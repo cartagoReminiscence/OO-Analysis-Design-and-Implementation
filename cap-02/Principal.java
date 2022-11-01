@@ -1,16 +1,10 @@
 public class Principal {
 	public static void main(String[] args){
-		//Student abraham = new Student();
-		//Student abraham = new Student("Abraham");
-		Student abraham = new Student("Abraham", "Los angeles  - 507");
-		System.out.println(abraham);
+		Course cs220 = new Course("CS 220", "Algorithms II");
+		cs220.setDescription("Advanced course of algorithms and data-structures handling");
+		cs220.setNumberOfCredits(10);
+		Section cs220Section1 = cs220.createSection("Spring 2022", "Lecture Hall 106", "M W 4-6:05");
 
-		Course aCourse = new Course();
-		abraham.addCourse(aCourse);
-		abraham.assignGrade(aCourse, 'C');
-		System.out.println(abraham.getGPA());
-
-		Student.setMinimumGPA(0.65);//<class_name>.<method_name>
-		System.out.println("minimumGPA:" + Student.getMinimumGPA());
+		System.out.println(cs220Section1);
 	}
 }
