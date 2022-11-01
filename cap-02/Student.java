@@ -1,7 +1,8 @@
 public class Student {
 	private String name;//access specifier (e.g. private, public)
 	private String address;
-	private double gpa;
+	private double gpa;//instance field
+	public static double minimumGPA;//static field
 
 	public Student(String studentName){// constructor
 		name = studentName;
@@ -23,6 +24,10 @@ public class Student {
 		address = newAddress;
 	}
 
+	public static void setMinimumGPA(double newMinimum){
+		minimumGPA = newMinimum;
+	}
+
 	public String getName(){
 		return name;
 	}
@@ -31,14 +36,22 @@ public class Student {
 		return address;
 	}
 
+	public double getGPA(){
+		return gpa;
+	}
+
+	public static double getMinimumGPA(){
+		return minimumGPA;
+	}
+
+	public String toString(){
+		return "Name " + name + ", Address " + address + ", GPA " + gpa;
+	}
+
 	public void addCourse(Course newCourse){
 	}
 
 	private void computeGPA(){
-	}
-
-	public double getGPA(){
-		return gpa;
 	}
 
 	public void assignGrade(Course aCourse, char newGrade){
