@@ -1,8 +1,8 @@
 public class Principal {
 	public static void main(String[] args){
-		Student abraham = new Student();
-		abraham.setName("Abraham");
-		//System.out.println("name: " + abraham.getName());
+		//Student abraham = new Student();
+		//Student abraham = new Student("Abraham");
+		Student abraham = new Student("Abraham", "Los angeles, 507");
 
 		Course aCourse = new Course();
 		abraham.addCourse(aCourse);
